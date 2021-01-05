@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public class Contenu
+namespace LUDOGAMM
 {
-	public Contenu()
+	public class Contenu
 	{
+
 		public int quantite;
+
 	}
+
 }

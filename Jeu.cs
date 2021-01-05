@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-public class Jeu
+namespace LUDOGAMM
 {
-	public Jeu()
-	{
-		public string titre;
+	public class Jeu
+{
+	
+	public string titre;
 	public string auteur;
 	public string editeur;
 	public string regleDuJeu;

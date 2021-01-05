@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LUDOGAMM
 {
-    //Antoine
+
     class Adhesion
     {
         public Boolean cotisation;
