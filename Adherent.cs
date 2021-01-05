@@ -4,6 +4,7 @@ using System.Text;
 
 namespace LUDOGAMM
 {
+    //Mireille est ici
     class Adherent
     {
         public string nom;
