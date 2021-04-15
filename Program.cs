@@ -17,7 +17,7 @@ namespace LUDOGAMM
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Connexion.GetInstance();
+            //Connexion.GetInstance();//verifie connexion SQL
             Application.Run(new AjouterAdherent());
         }
     }

@@ -15,13 +15,14 @@ namespace LUDOGAMM
             // Préparation de la connexion à la base de données
             if (LaConnexion == null)
             {
-                string connectionString = "Data Source=DESKTOP-7O2DRQE\\SQLEXPRESS;Initial Catalog=LUDOGAMM;User Id=gwenchlan;Password=sio56;";
+               // string connectionString = "Data Source=DESKTOP-7O2DRQE\\SQLEXPRESS;Initial Catalog=LUDOTHEQUE;User Id=gwenchlan;Password=sio56;";
+                string connectionString = "Data Source=DESKTOP-7O2DRQE\\SQLEXPRESS;Initial Catalog=LUDOTHEQUE;User Id=Mireille;Password=sio;";
                 LaConnexion = new SqlConnection(connectionString);
                 try
                 {
                     // Connexion à la base de données
                     LaConnexion.Open();
-                    Form dlg1 = new Form();
+                    Form dlg1 = new Form();// boite de dialogue verifie connexion
                     dlg1.ShowDialog();
                 }
                 catch (Exception ex)
