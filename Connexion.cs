@@ -15,7 +15,7 @@ namespace LUDOGAMM
             // Préparation de la connexion à la base de données
             if (LaConnexion == null)
             {
-                //string connectionString = "Data Source=DESKTOP-7O2DRQE\\SQLEXPRESS;Initial Catalog=LUDOGAMM;User Id=gwenchlan;Password=sio56;";
+                string connectionString = "Data Source=DESKTOP-7O2DRQE\\SQLEXPRESS;Initial Catalog=LUDOGAMM;User Id=gwenchlan;Password=sio56;";
                 //string connectionString = "Data Source=DESKTOP-7O2DRQE\SQLEXPRESS;Initial Catalog=LUDOGAMM;User Id=Mireille;Password=sio;";
                 //string connectionString = "Data Source=DESKTOP-7O2DRQE;Initial Catalog=LUDOGAMM;User Id=Antoine;Password=sio";
 
