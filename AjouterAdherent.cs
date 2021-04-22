@@ -83,6 +83,7 @@ namespace LUDOGAMM
             dataGridView1.Columns[7].Name = "Adhérent secondaire2";
             dataGridView1.Columns[8].Name = "Adhérent secondaire3";
             dataGridView1.Columns[9].Name = "Adhérent secondaire4";
+
         }
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace LUDOGAMM
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
