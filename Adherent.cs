@@ -7,6 +7,8 @@ namespace LUDOGAMM
     
     class Adherent
     {
+       
+
         public string nom;
         public string prenom;
         public int idAdresse;

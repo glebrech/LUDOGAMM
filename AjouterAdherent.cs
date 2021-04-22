@@ -33,6 +33,8 @@ namespace LUDOGAMM
             button1.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right); 
             button1.Text = "Valider";
             button1.BackColor = Color.OrangeRed;
+            CreerAdherent();
+
 
         }
 
