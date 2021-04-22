@@ -33,6 +33,7 @@ namespace LUDOGAMM
             button1.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right); 
             button1.Text = "Valider";
             button1.BackColor = Color.OrangeRed;
+            MessageBox.Show("test");
 
         }
 
@@ -77,6 +78,7 @@ namespace LUDOGAMM
             dataGridView1.Columns[3].Name = "Adresse";
             dataGridView1.Columns[4].Name = "Email";
             dataGridView1.Columns[5].Name = "Téléphone";
+
             dataGridView1.Columns[6].Name = "Adhérent secondaire1";
             dataGridView1.Columns[7].Name = "Adhérent secondaire2";
             dataGridView1.Columns[8].Name = "Adhérent secondaire3";
@@ -122,6 +124,11 @@ namespace LUDOGAMM
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
