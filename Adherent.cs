@@ -16,4 +16,6 @@ namespace LUDOGAMM
         public int telephone;
         public string adherentSecondaire;
     }
+
+ 
 }

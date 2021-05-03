@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LUDOGAMM
 {
     public partial class AjouterAdherent : Form 
@@ -33,8 +34,6 @@ namespace LUDOGAMM
             button1.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right); 
             button1.Text = "Valider";
             button1.BackColor = Color.OrangeRed;
-            CreerAdherent();
-
 
         }
 
@@ -85,13 +84,13 @@ namespace LUDOGAMM
             dataGridView1.Columns[9].Name = "Adhérent secondaire4";
         }
 
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+       /* private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             List<string> nList = new List<string>();
             nList.Add("Gérer les emprunts");
             nList.Add("Gérer les adhérents");
             nList.Add("Gérer les stocks");
-        }
+        }*/
 
         // Gère la fermeture du formulaire par l'utilisateur
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
