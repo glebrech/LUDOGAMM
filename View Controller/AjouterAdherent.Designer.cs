@@ -28,36 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Actualités");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Emprunts en cours");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Ajouter emprunts");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Retours");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Réservations");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Gérer les emprunts", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ajouter Adhérents");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Retirer adhérents");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Modifier adhérents");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Gérer les adhérents", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Ajouter Modèle de jeu");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Ajouter un exemplaire");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Retirer un exemplaire");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Modifier un exemplaire");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Gérer les stocks", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14});
             this.button1 = new System.Windows.Forms.Button();
             this.ChexkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.Filtrer = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +38,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -114,20 +86,6 @@
             this.checkBox2.Text = "Caution";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // Filtrer
-            // 
-            this.Filtrer.FormattingEnabled = true;
-            this.Filtrer.Items.AddRange(new object[] {
-            "Adhérents",
-            "Emprunts",
-            "Stock"});
-            this.Filtrer.Location = new System.Drawing.Point(673, 67);
-            this.Filtrer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Filtrer.Name = "Filtrer";
-            this.Filtrer.Size = new System.Drawing.Size(137, 24);
-            this.Filtrer.TabIndex = 6;
-            this.Filtrer.Text = "Filtrer";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -143,7 +101,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 91);
+            this.dataGridView1.Size = new System.Drawing.Size(648, 91);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
             // 
@@ -177,77 +135,14 @@
             this.Column5.HeaderText = "Téléphone";
             this.Column5.Name = "Column5";
             // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(12, 91);
-            this.treeView1.Name = "treeView1";
-            treeNode1.BackColor = System.Drawing.Color.White;
-            treeNode1.ForeColor = System.Drawing.Color.Violet;
-            treeNode1.Name = "Node0";
-            treeNode1.NodeFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode1.Text = "Actualités";
-            treeNode2.Name = "Node2";
-            treeNode2.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode2.Text = "Emprunts en cours";
-            treeNode3.Name = "Node3";
-            treeNode3.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode3.Text = "Ajouter emprunts";
-            treeNode4.Name = "Node4";
-            treeNode4.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode4.Text = "Retours";
-            treeNode5.Name = "Node5";
-            treeNode5.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode5.Text = "Réservations";
-            treeNode6.ForeColor = System.Drawing.Color.MediumOrchid;
-            treeNode6.Name = "Node1";
-            treeNode6.NodeFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode6.Text = "Gérer les emprunts";
-            treeNode7.Name = "Node7";
-            treeNode7.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode7.Text = "Ajouter Adhérents";
-            treeNode8.Name = "Node9";
-            treeNode8.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode8.Text = "Retirer adhérents";
-            treeNode9.Name = "Node10";
-            treeNode9.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode9.Text = "Modifier adhérents";
-            treeNode10.ForeColor = System.Drawing.Color.Violet;
-            treeNode10.Name = "Node6";
-            treeNode10.NodeFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode10.Text = "Gérer les adhérents";
-            treeNode11.Name = "Node8";
-            treeNode11.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode11.Text = "Ajouter Modèle de jeu";
-            treeNode12.Name = "Node12";
-            treeNode12.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode12.Text = "Ajouter un exemplaire";
-            treeNode13.Name = "Node13";
-            treeNode13.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode13.Text = "Retirer un exemplaire";
-            treeNode14.Name = "Node14";
-            treeNode14.NodeFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode14.Text = "Modifier un exemplaire";
-            treeNode15.ForeColor = System.Drawing.Color.MediumOrchid;
-            treeNode15.Name = "Node11";
-            treeNode15.NodeFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode15.Text = "Gérer les stocks";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode6,
-            treeNode10,
-            treeNode15});
-            this.treeView1.Size = new System.Drawing.Size(209, 302);
-            this.treeView1.TabIndex = 12;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(851, 61);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(891, 61);
             this.flowLayoutPanel1.TabIndex = 13;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -322,15 +217,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Plum;
-            this.ClientSize = new System.Drawing.Size(851, 525);
+            this.BackColor = System.Drawing.Color.MediumPurple;
+            this.ClientSize = new System.Drawing.Size(891, 494);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Filtrer);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.ChexkBox1);
             this.Controls.Add(this.button1);
@@ -353,9 +246,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox ChexkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.ComboBox Filtrer;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView2;

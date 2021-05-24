@@ -4,11 +4,7 @@ using System.Text;
 
 namespace LUDOGAMM
 {
-    class ListeAdherents
+    class Marc
     {
-        public void contacter()
-        {
-
-        }
     }
 }
