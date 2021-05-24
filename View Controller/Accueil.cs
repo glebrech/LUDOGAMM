@@ -21,50 +21,19 @@ namespace LUDOGAMM
             //MessageBox.Show();
         }
 
-        private void Ok_Click(object sender, EventArgs e)
-        {
-            m_ok.Text = "Ok";
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-        private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-
 
         private void Accueil_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
