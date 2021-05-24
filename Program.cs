@@ -14,13 +14,13 @@ namespace LUDOGAMM
         [STAThread]
         static void Main()
         {
-
             System.Diagnostics.Debug.WriteLine("Test");
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Connexion.GetInstance();//verifie connexion SQL
-            Application.Run(new AjouterAdherent());
+            Application.Run(new Adherents());
+            // Application.Run(new AjouterJeu());
             System.Diagnostics.Debug.WriteLine("FIN");
         }
     }
