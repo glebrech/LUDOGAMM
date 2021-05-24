@@ -23,7 +23,7 @@ namespace LUDOGAMM
 
         public Adherents()
         {
-            // Constructeur : initialize tout ce qui ce trouve sur la vue.
+            // Constructeur : initialise tout ce qui ce trouve sur la vue.
             InitializeComponent();
         }
 
@@ -55,14 +55,32 @@ namespace LUDOGAMM
         private string GetIdAdresse(SqlCommand bdd)
         {
             // Définition de la requête.
-            SqlCommand command = new SqlCommand("SELECT idAdresse FROM LUDOTHEQUE.dbo.ADRESSE");
+            bdd.CommandText = "SELECT ADRESSE.idAdresse FROM ADRESSE INNER JOIN ADHERENT ON ADRESSE.idAdresse = ADHERENT.idAdresse";
+            string idAdresse = null;
+
+            try
+            {
+                using (SqlDataReader reader = bdd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        idAdresse = String.Format("{0}", reader["idAdresse"]);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Requete invalide: " + e.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return idAdresse;
         }
-        private bool AjouterAdherentBDD(SqlCommand bdd, string idAdresse, string nom, string prenom, string email, string telephone)
+
+        private bool AjouterAdherentBDD(SqlCommand bdd, string idAdresse, string nom, string prenom, string email, string telephone, string adherentsSecondaires)
         {
             bool estAjoute = true;
 
             // Définition de la requête.
-            bdd.CommandText = "INSERT INTO LUDOTHEQUE.dbo.ADHERENT(idAdresse,nom,prenom,email,telephone)VALUES(@idAdresse,@nom,@prenom,@email,@tel)";
+            bdd.CommandText = "INSERT INTO LUDOTHEQUE.dbo.ADHERENT(idAdresse,Nom,Prenom,Email,Telephone,AdherentsSecondaires)VALUES(@idAdresse,@nom,@prenom,@email,@tel,@adherentsSecondaires)";
 
             // Définition des paramètres de la requête.
             bdd.Parameters.AddWithValue("@idAdresse", idAdresse);
@@ -70,6 +88,7 @@ namespace LUDOGAMM
             bdd.Parameters.AddWithValue("@prenom", prenom);
             bdd.Parameters.AddWithValue("@email", email);
             bdd.Parameters.AddWithValue("@tel", telephone);
+            bdd.Parameters.AddWithValue("@adherentsSecondaires", adherentsSecondaires);
 
             // Exécution de la requête
             try
@@ -83,12 +102,50 @@ namespace LUDOGAMM
             }
             return estAjoute;
         }
-    
 
-      //  private bool ajouterAdhesionBDD()
-      //  {
-      ////  bdd.CommandText = "INSERT INTO LUDOTHEQUE.dbo.ADHESION(dateDebut)VALUES(@debutAdhesion)";
-      //  }
+        private string GetIdAdherent(SqlCommand bdd)
+        {
+            // Définition de la requête.
+            bdd.CommandText = "SELECT ADHERENT.idAdherent FROM ADHERENT WHERE ADHERENT.idAdherent = @nom AND ADHERENT.idAdherent = @prenom";
+            string idAdherent = null;
+
+            try
+            {
+                using (SqlDataReader reader = bdd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        idAdherent = String.Format("{0}", reader["idAdherent"]);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Requete invalide: " + e.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return idAdherent;
+        }
+        private bool AjouterAdhesionBDD(SqlCommand bdd, string dateDebut)
+        {
+            bool estAjoute = true;
+
+            // Définition de la requête.
+            bdd.CommandText = "INSERT INTO LUDOTHEQUE.dbo.ADHESION(debutAdhesion)VALUES(@debutAdhesion)";
+
+            // Définition des paramètres de la requête.
+            bdd.Parameters.AddWithValue("@debutAdhesion", dateDebut);
+            // Exécution de la requête
+            try
+            {
+                bdd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                estAjoute = false;
+                MessageBox.Show("Requete invalide: " + e.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return estAjoute;
+        }
 
 
 
@@ -101,7 +158,7 @@ namespace LUDOGAMM
             // 3.1 Verifier le retour de la requete
             //     Si ok -> Message "bien enregistré"
             //     Sinon -> message d'erreur et on ne fait rien.
-            //string idAdherent = dataGridAdherentPrincipal.Rows[0].Cells[0].Value.ToString();
+            string idAdherent = dataGridAdherentPrincipal.Rows[0].Cells[0].Value.ToString();
             string nom = dataGridAdherentPrincipal.Rows[0].Cells[1].Value.ToString();
             string prenom = dataGridAdherentPrincipal.Rows[0].Cells[2].Value.ToString();
             string rue = dataGridAdherentPrincipal.Rows[0].Cells[3].Value.ToString();
@@ -129,10 +186,12 @@ namespace LUDOGAMM
                 if (bdd != null)
                 {
                     // Ajout de l'adresse dans la base de donnée + adhérent + date adhésion
-                    estAjoute = AjouterAdresseBDD(bdd, rue, codePostal, ville);
+                    _ = AjouterAdresseBDD(bdd, rue, codePostal, ville);
                     string idAdresse = GetIdAdresse(bdd);
-                    estAjoute = AjouterAdherentBDD(bdd, idAdresse, nom, prenom, email, telephone);
-
+                    //string idAdherent = GetIdAdherent(bdd);
+                    string adherentsSecondaires = (adherent1 + " " + adherent2 + " " + adherent3 + " " + adherent4);
+                    _ = AjouterAdherentBDD(bdd,idAdresse, nom, prenom, email, telephone, adherentsSecondaires);
+                    estAjoute = AjouterAdhesionBDD(bdd, dateDebut);
 
 
                     // Définition des paramètres de la requête
@@ -140,10 +199,12 @@ namespace LUDOGAMM
                     bdd.Parameters.AddWithValue("@codePostal", codePostal);
                     bdd.Parameters.AddWithValue("@ville", ville);
                     bdd.Parameters.AddWithValue("@idAdresse", idAdresse);
+                    bdd.Parameters.AddWithValue("@idAdherent", idAdherent);
                     bdd.Parameters.AddWithValue("@nom", nom);
                     bdd.Parameters.AddWithValue("@prenom", prenom);
                     bdd.Parameters.AddWithValue("@email", email);
                     bdd.Parameters.AddWithValue("@tel", telephone);
+                    bdd.Parameters.AddWithValue("@idAdherent", idAdherent);
                     bdd.Parameters.AddWithValue("@debutAdhesion", dateDebut);
 
                     // Exécution de la requête

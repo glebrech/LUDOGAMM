@@ -282,7 +282,6 @@ namespace LUDOGAMM
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent2Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent3Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent4Col;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Addresse;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelCol;
 
