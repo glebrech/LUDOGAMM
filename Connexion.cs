@@ -24,8 +24,7 @@ namespace LUDOGAMM
                 {
                     // Connexion à la base de données
                     LaConnexion.Open();
-                    Form dlg1 = new Form();
-                    dlg1.ShowDialog();
+
                 }
                 catch (Exception ex)
                 {

@@ -1,7 +1,7 @@
 ﻿
-namespace LUDOGAMM.View_Controller
+namespace LUDOGAMM
 {
-    partial class MenuVues
+    partial class MenuView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace LUDOGAMM.View_Controller
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Ajouter Emprunt");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Retour");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Réservations");
@@ -49,14 +48,13 @@ namespace LUDOGAMM.View_Controller
             treeNode9});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // treeView1
             // 
             this.treeView1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.treeView1.Location = new System.Drawing.Point(-3, 67);
+            this.treeView1.Location = new System.Drawing.Point(-3, 46);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Ajouter";
             treeNode1.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -92,9 +90,8 @@ namespace LUDOGAMM.View_Controller
             treeNode4,
             treeNode6,
             treeNode10});
-            this.treeView1.Size = new System.Drawing.Size(193, 383);
+            this.treeView1.Size = new System.Drawing.Size(191, 404);
             this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // label1
             // 
@@ -105,12 +102,6 @@ namespace LUDOGAMM.View_Controller
             this.label1.Size = new System.Drawing.Size(119, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "LUDOTHEQUE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // richTextBox1
             // 
@@ -118,11 +109,11 @@ namespace LUDOGAMM.View_Controller
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.Location = new System.Drawing.Point(-3, -2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(806, 71);
+            this.richTextBox1.Size = new System.Drawing.Size(806, 51);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "   LUDOTHEQUE";
             // 
-            // MenuVues
+            // MenuView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,19 +121,19 @@ namespace LUDOGAMM.View_Controller
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.richTextBox1);
-            this.Name = "MenuVues";
-            this.Text = "MenuVues";
-            this.Load += new System.EventHandler(this.MenuVues_Load);
+            this.Name = "MenuView";
+            this.Text = "MenuView";
+            this.Load += new System.EventHandler(this.MenuView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

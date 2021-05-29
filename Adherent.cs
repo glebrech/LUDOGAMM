@@ -12,5 +12,9 @@ namespace LUDOGAMM
         public string email;
         public int telephone;
         public string adherentSecondaire;
+        
+
+
+        
     }
 }

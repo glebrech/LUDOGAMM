@@ -6,16 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LUDOGAMM.View_Controller
+namespace LUDOGAMM
 {
-    public partial class MenuVues : Form
+    public partial class MenuView : Form
     {
-        public MenuVues()
+        public MenuView()
         {
             InitializeComponent();
         }
 
-        private void MenuVues_Load(object sender, EventArgs e)
+        private void MenuView_Load(object sender, EventArgs e)
         {
 
         }
@@ -24,12 +24,5 @@ namespace LUDOGAMM.View_Controller
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }
