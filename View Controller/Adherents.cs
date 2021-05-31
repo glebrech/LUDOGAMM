@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace LUDOGAMM
 {
-    public partial class Adherents : Form 
+    public partial class Adherents : MenuView
        //partial signifie que la classe est définie
        // à plusieurs endroits. Ici vous ne voyez que ce que vous devez toucher.
        // L'autre partie de la classe a été faite automatiquement et se charge du reste.
@@ -360,6 +360,11 @@ namespace LUDOGAMM
         private void Caution_CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             caution = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

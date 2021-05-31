@@ -53,6 +53,7 @@
             this.Valider_ButtonF.TabIndex = 2;
             this.Valider_ButtonF.Text = "Valider";
             this.Valider_ButtonF.UseVisualStyleBackColor = true;
+            this.Valider_ButtonF.Click += new System.EventHandler(this.ValiderClick);
             // 
             // dateFinF
             // 
@@ -91,6 +92,7 @@
             // 
             // dataGridAdminF
             // 
+            this.dataGridAdminF.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridAdminF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAdminF.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.prixCautionF,
@@ -100,9 +102,9 @@
             this.dureeEmpruntF,
             this.dateDebutF,
             this.dateFinF});
-            this.dataGridAdminF.Location = new System.Drawing.Point(32, 61);
+            this.dataGridAdminF.Location = new System.Drawing.Point(194, 69);
             this.dataGridAdminF.Name = "dataGridAdminF";
-            this.dataGridAdminF.Size = new System.Drawing.Size(728, 111);
+            this.dataGridAdminF.Size = new System.Drawing.Size(609, 135);
             this.dataGridAdminF.TabIndex = 1;
             this.dataGridAdminF.Text = "dataGridView1";
             this.dataGridAdminF.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -111,15 +113,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Peru;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Valider_ButtonF);
             this.Controls.Add(this.dataGridAdminF);
             this.Name = "Administration";
             this.Text = "Administration";
             this.Load += new System.EventHandler(this.Administration_Load);
+            this.Controls.SetChildIndex(this.dataGridAdminF, 0);
+            this.Controls.SetChildIndex(this.Valider_ButtonF, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAdminF)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

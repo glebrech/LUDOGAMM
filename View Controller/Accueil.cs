@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace LUDOGAMM
 {
-    public partial class Accueil : Form
+    public partial class Accueil : MenuView
     //partial signifie que la classe est définie
     // à plusieurs endroits. Ici vous ne voyez que ce que vous devez toucher.
     // L'autre partie de la classe a été faite automatiquement et se charge du reste.

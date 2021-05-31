@@ -59,7 +59,7 @@ namespace LUDOGAMM
             // Valider_Button
             // 
             this.Valider_Button.BackColor = System.Drawing.SystemColors.Window;
-            this.Valider_Button.Location = new System.Drawing.Point(718, 547);
+            this.Valider_Button.Location = new System.Drawing.Point(565, 418);
             this.Valider_Button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Valider_Button.Name = "Valider_Button";
             this.Valider_Button.Size = new System.Drawing.Size(92, 32);
@@ -71,7 +71,7 @@ namespace LUDOGAMM
             // Cotisation_CheckBox
             // 
             this.Cotisation_CheckBox.AutoSize = true;
-            this.Cotisation_CheckBox.Location = new System.Drawing.Point(267, 507);
+            this.Cotisation_CheckBox.Location = new System.Drawing.Point(565, 366);
             this.Cotisation_CheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Cotisation_CheckBox.Name = "Cotisation_CheckBox";
             this.Cotisation_CheckBox.Size = new System.Drawing.Size(91, 20);
@@ -83,7 +83,7 @@ namespace LUDOGAMM
             // Caution_CheckBox
             // 
             this.Caution_CheckBox.AutoSize = true;
-            this.Caution_CheckBox.Location = new System.Drawing.Point(267, 554);
+            this.Caution_CheckBox.Location = new System.Drawing.Point(565, 392);
             this.Caution_CheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Caution_CheckBox.Name = "Caution_CheckBox";
             this.Caution_CheckBox.Size = new System.Drawing.Size(77, 20);
@@ -104,11 +104,11 @@ namespace LUDOGAMM
             this.VilleCol,
             this.EmailCol,
             this.TelCol});
-            this.dataGridAdherentPrincipal.Location = new System.Drawing.Point(90, 133);
+            this.dataGridAdherentPrincipal.Location = new System.Drawing.Point(195, 84);
             this.dataGridAdherentPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridAdherentPrincipal.Name = "dataGridAdherentPrincipal";
             this.dataGridAdherentPrincipal.RowTemplate.Height = 25;
-            this.dataGridAdherentPrincipal.Size = new System.Drawing.Size(821, 100);
+            this.dataGridAdherentPrincipal.Size = new System.Drawing.Size(770, 100);
             this.dataGridAdherentPrincipal.TabIndex = 10;
             this.dataGridAdherentPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAdherentPrincipal_CellContentClick);
             // 
@@ -156,7 +156,7 @@ namespace LUDOGAMM
             this.Adherent2Col,
             this.Adherent3Col,
             this.Adherent4Col});
-            this.dataGridAdherentsSecondaires.Location = new System.Drawing.Point(199, 268);
+            this.dataGridAdherentsSecondaires.Location = new System.Drawing.Point(195, 219);
             this.dataGridAdherentsSecondaires.Name = "dataGridAdherentsSecondaires";
             this.dataGridAdherentsSecondaires.RowTemplate.Height = 25;
             this.dataGridAdherentsSecondaires.Size = new System.Drawing.Size(462, 66);
@@ -185,15 +185,16 @@ namespace LUDOGAMM
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 91);
+            this.textBox1.Location = new System.Drawing.Point(195, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(134, 23);
             this.textBox1.TabIndex = 15;
             this.textBox1.Text = "Adhérent principal";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 239);
+            this.textBox2.Location = new System.Drawing.Point(194, 190);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 23);
             this.textBox2.TabIndex = 16;
@@ -201,7 +202,7 @@ namespace LUDOGAMM
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(237, 364);
+            this.textBox3.Location = new System.Drawing.Point(195, 291);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(107, 23);
             this.textBox3.TabIndex = 18;
@@ -214,7 +215,7 @@ namespace LUDOGAMM
             this.dataGridAdhesion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAdhesion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateDebutCol});
-            this.dataGridAdhesion.Location = new System.Drawing.Point(199, 404);
+            this.dataGridAdhesion.Location = new System.Drawing.Point(194, 320);
             this.dataGridAdhesion.Name = "dataGridAdhesion";
             this.dataGridAdhesion.RowTemplate.Height = 25;
             this.dataGridAdhesion.Size = new System.Drawing.Size(224, 66);
@@ -231,8 +232,8 @@ namespace LUDOGAMM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(978, 686);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(978, 459);
             this.Controls.Add(this.dataGridAdhesion);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -246,6 +247,15 @@ namespace LUDOGAMM
             this.Name = "Adherents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Adherents_Load);
+            this.Controls.SetChildIndex(this.Valider_Button, 0);
+            this.Controls.SetChildIndex(this.Cotisation_CheckBox, 0);
+            this.Controls.SetChildIndex(this.Caution_CheckBox, 0);
+            this.Controls.SetChildIndex(this.dataGridAdherentPrincipal, 0);
+            this.Controls.SetChildIndex(this.dataGridAdherentsSecondaires, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.dataGridAdhesion, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAdherentPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAdherentsSecondaires)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAdhesion)).EndInit();

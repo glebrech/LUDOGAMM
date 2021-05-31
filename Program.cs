@@ -19,9 +19,9 @@ namespace LUDOGAMM
             Application.SetCompatibleTextRenderingDefault(false);
             //Connexion.GetInstance();//verifie connexion SQL
             Application.Run(new Administration());
-
-            Application.Run(new Adherents());
             Application.Run(new Accueil());
+            Application.Run(new Adherents());
+            Application.Run(new AjouterJeu());
         }
     }
 }

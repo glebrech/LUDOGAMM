@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace LUDOGAMM
 {
-    public partial class Administration : Form
+    public partial class Administration : MenuView
     {
         public bool estAjoute;
 
@@ -163,7 +163,7 @@ namespace LUDOGAMM
             // Ancre le bouton dans le coin inférieur droit
             Valider_ButtonF.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
             Valider_ButtonF.Text = "Valider";
-            Valider_ButtonF.BackColor = Color.OrangeRed;
+            Valider_ButtonF.BackColor = Color.Blue;
 
             if (AjouterAdministration())
             {
@@ -174,22 +174,6 @@ namespace LUDOGAMM
                 MessageBox.Show("Adhérent non enregistré!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         private void Administration_Load(object sender, EventArgs e)
