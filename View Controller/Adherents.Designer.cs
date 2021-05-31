@@ -34,7 +34,6 @@ namespace LUDOGAMM
             this.Cotisation_CheckBox = new System.Windows.Forms.CheckBox();
             this.Caution_CheckBox = new System.Windows.Forms.CheckBox();
             this.dataGridAdherentPrincipal = new System.Windows.Forms.DataGridView();
-            this.idAdherentCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrenomCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RueCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +78,7 @@ namespace LUDOGAMM
             this.Cotisation_CheckBox.TabIndex = 2;
             this.Cotisation_CheckBox.Text = "Cotisation";
             this.Cotisation_CheckBox.UseVisualStyleBackColor = true;
+            this.Cotisation_CheckBox.CheckedChanged += new System.EventHandler(this.Cotisation_CheckBox_CheckedChanged);
             // 
             // Caution_CheckBox
             // 
@@ -90,13 +90,13 @@ namespace LUDOGAMM
             this.Caution_CheckBox.TabIndex = 3;
             this.Caution_CheckBox.Text = "Caution";
             this.Caution_CheckBox.UseVisualStyleBackColor = true;
+            this.Caution_CheckBox.CheckedChanged += new System.EventHandler(this.Caution_CheckBox_CheckedChanged);
             // 
             // dataGridAdherentPrincipal
             // 
             this.dataGridAdherentPrincipal.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridAdherentPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAdherentPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAdherentCol,
             this.NomCol,
             this.PrenomCol,
             this.RueCol,
@@ -104,19 +104,13 @@ namespace LUDOGAMM
             this.VilleCol,
             this.EmailCol,
             this.TelCol});
-            this.dataGridAdherentPrincipal.Location = new System.Drawing.Point(199, 120);
+            this.dataGridAdherentPrincipal.Location = new System.Drawing.Point(90, 133);
             this.dataGridAdherentPrincipal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridAdherentPrincipal.Name = "dataGridAdherentPrincipal";
             this.dataGridAdherentPrincipal.RowTemplate.Height = 25;
-            this.dataGridAdherentPrincipal.Size = new System.Drawing.Size(708, 100);
+            this.dataGridAdherentPrincipal.Size = new System.Drawing.Size(821, 100);
             this.dataGridAdherentPrincipal.TabIndex = 10;
             this.dataGridAdherentPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAdherentPrincipal_CellContentClick);
-            // 
-            // idAdherentCol
-            // 
-            this.idAdherentCol.HeaderText = "N° Adhérent";
-            this.idAdherentCol.Name = "idAdherentCol";
-            this.idAdherentCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // NomCol
             // 
@@ -271,21 +265,19 @@ namespace LUDOGAMM
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn idAdherentCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrenomCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RueCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodePostalCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VilleCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent1Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent2Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent3Col;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adherent4Col;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelCol;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDebutCol;
+        private DataGridViewTextBoxColumn NomCol;
+        private DataGridViewTextBoxColumn PrenomCol;
+        private DataGridViewTextBoxColumn RueCol;
+        private DataGridViewTextBoxColumn CodePostalCol;
+        private DataGridViewTextBoxColumn VilleCol;
+        private DataGridViewTextBoxColumn EmailCol;
+        private DataGridViewTextBoxColumn TelCol;
     }
 }
 
