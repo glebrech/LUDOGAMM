@@ -110,7 +110,7 @@ namespace LUDOGAMM
             this.dataGridAdherentPrincipal.RowTemplate.Height = 25;
             this.dataGridAdherentPrincipal.Size = new System.Drawing.Size(770, 100);
             this.dataGridAdherentPrincipal.TabIndex = 10;
-            this.dataGridAdherentPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAdherentPrincipal_CellContentClick);
+            
             // 
             // NomCol
             // 
@@ -161,7 +161,7 @@ namespace LUDOGAMM
             this.dataGridAdherentsSecondaires.RowTemplate.Height = 25;
             this.dataGridAdherentsSecondaires.Size = new System.Drawing.Size(462, 66);
             this.dataGridAdherentsSecondaires.TabIndex = 14;
-            this.dataGridAdherentsSecondaires.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAdherentsSecondaires_CellContentClick);
+            
             // 
             // Adherent1Col
             // 
@@ -220,7 +220,7 @@ namespace LUDOGAMM
             this.dataGridAdhesion.RowTemplate.Height = 25;
             this.dataGridAdhesion.Size = new System.Drawing.Size(224, 66);
             this.dataGridAdhesion.TabIndex = 14;
-            this.dataGridAdhesion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAdhesion_CellContentClick);
+           
             // 
             // dateDebutCol
             // 

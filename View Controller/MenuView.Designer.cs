@@ -29,23 +29,21 @@ namespace LUDOGAMM
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Ajouter Emprunt");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Retour");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Réservations");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Gérer Emprunts", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Administration");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Ajouter adhérent");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Liste adhérents");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Adhérent", new System.Windows.Forms.TreeNode[] {
             treeNode2,
             treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Ajouter adhérent");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ajouter Adhérent", new System.Windows.Forms.TreeNode[] {
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ajouter un exemplaire");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Ajouter un modèle jeu");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Gérer modèle");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Gérer Stock", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Ajouter un exemplaire");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Liste jeux");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ajouter un modèle jeu");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Gérer modèle");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Jeu", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
             treeNode7,
-            treeNode8,
-            treeNode9});
+            treeNode8});
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -56,42 +54,40 @@ namespace LUDOGAMM
             this.treeView1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.treeView1.Location = new System.Drawing.Point(-3, 46);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Ajouter";
-            treeNode1.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode1.Text = "Ajouter Emprunt";
-            treeNode2.Name = "Retour";
+            treeNode1.Name = "Emprunts";
+            treeNode1.NodeFont = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            treeNode1.Text = "Administration";
+            treeNode2.Name = "AjoutAdhérent";
             treeNode2.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode2.Text = "Retour";
-            treeNode3.Name = "Réservations";
+            treeNode2.Text = "Ajouter adhérent";
+            treeNode3.Name = "Liste";
             treeNode3.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode3.Text = "Réservations";
-            treeNode4.Name = "Emprunts";
+            treeNode3.Text = "Liste adhérents";
+            treeNode4.Name = "Adhérents";
             treeNode4.NodeFont = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode4.Text = "Gérer Emprunts";
-            treeNode5.Name = "AjoutAdhérent";
+            treeNode4.Text = "Adhérent";
+            treeNode5.Name = "exemplaire";
             treeNode5.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode5.Text = "Ajouter adhérent";
-            treeNode6.Name = "Adhérents";
-            treeNode6.NodeFont = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode6.Text = "Ajouter Adhérent";
-            treeNode7.Name = "exemplaire";
+            treeNode5.Text = "Ajouter un exemplaire";
+            treeNode6.Name = "ListeJ";
+            treeNode6.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            treeNode6.Text = "Liste jeux";
+            treeNode7.Name = "AjouterModele";
             treeNode7.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode7.Text = "Ajouter un exemplaire";
-            treeNode8.Name = "AjouterModele";
+            treeNode7.Text = "Ajouter un modèle jeu";
+            treeNode8.Name = "GérerModele";
             treeNode8.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode8.Text = "Ajouter un modèle jeu";
-            treeNode9.Name = "GérerModele";
-            treeNode9.NodeFont = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            treeNode9.Text = "Gérer modèle";
-            treeNode10.Name = "Stock";
-            treeNode10.NodeFont = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            treeNode10.Text = "Gérer Stock";
+            treeNode8.Text = "Gérer modèle";
+            treeNode9.Name = "Stock";
+            treeNode9.NodeFont = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            treeNode9.Text = "Jeu";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
             treeNode4,
-            treeNode6,
-            treeNode10});
+            treeNode9});
             this.treeView1.Size = new System.Drawing.Size(191, 404);
             this.treeView1.TabIndex = 0;
+            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
             // 
             // label1
             // 
@@ -135,5 +131,6 @@ namespace LUDOGAMM
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        public event System.Windows.Forms.TreeNodeMouseClickEventHandler NodeMouseClick;
     }
 }

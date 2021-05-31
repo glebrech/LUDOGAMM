@@ -276,55 +276,8 @@ namespace LUDOGAMM
             }
         }
 
-        private void DataGridAdherentPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            this.dataGridAdherentPrincipal.GridColor = Color.Black;
-            this.dataGridAdherentPrincipal.BorderStyle = BorderStyle.Fixed3D;
-            this.Controls.Add(dataGridAdherentPrincipal);
-            dataGridAdherentPrincipal.ColumnCount = 10;
-            DataGridViewCellStyle style =
-                dataGridAdherentPrincipal.ColumnHeadersDefaultCellStyle;
-            style.BackColor = Color.OrangeRed;
-            style.ForeColor = Color.Black;
-            style.Font = new Font(dataGridAdherentPrincipal.Font, FontStyle.Bold);
 
-            dataGridAdherentPrincipal.EditMode = DataGridViewEditMode.EditOnEnter;
-            dataGridAdherentPrincipal.Name = "Ajouter adhérent";
-            dataGridAdherentPrincipal.Location = new Point(8, 8);
-            dataGridAdherentPrincipal.Size = new Size(500, 400);
-            dataGridAdherentPrincipal.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            dataGridAdherentPrincipal.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
-            dataGridAdherentPrincipal.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            dataGridAdherentPrincipal.GridColor = SystemColors.ActiveBorder;
-            dataGridAdherentPrincipal.RowHeadersVisible = true;
 
-            dataGridAdherentPrincipal.Columns[0].Name = "N° Adhérent";
-            dataGridAdherentPrincipal.Columns[1].Name = "Nom";
-            dataGridAdherentPrincipal.Columns[2].Name = "Prénom";
-            dataGridAdherentPrincipal.Columns[3].Name = "Rue";
-            dataGridAdherentPrincipal.Columns[4].Name = "Code Postal";
-            dataGridAdherentPrincipal.Columns[5].Name = "Ville";
-            dataGridAdherentPrincipal.Columns[6].Name = "Email";
-            dataGridAdherentPrincipal.Columns[7].Name = "Téléphone";
-        }
-
-        private void DataGridAdherentsSecondaires_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridAdherentsSecondaires.EditMode = DataGridViewEditMode.EditOnEnter;
-            dataGridAdherentsSecondaires.Name = "Ajouter adhérents";
-            dataGridAdherentsSecondaires.Location = new Point(8, 8);
-            dataGridAdherentsSecondaires.Size = new Size(500, 400);
-            dataGridAdherentsSecondaires.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            dataGridAdherentsSecondaires.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
-            dataGridAdherentsSecondaires.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            dataGridAdherentsSecondaires.GridColor = SystemColors.ActiveBorder;
-            dataGridAdherentsSecondaires.RowHeadersVisible = true;
-
-            dataGridAdherentsSecondaires.Columns[0].Name = "Adherent 1";
-            dataGridAdherentsSecondaires.Columns[1].Name = "Adherent 2";
-            dataGridAdherentsSecondaires.Columns[2].Name = "Adherent 3";
-            dataGridAdherentsSecondaires.Columns[3].Name = "Adherent 4";
-        }
 
    
             private void textBox3_TextChanged(object sender, EventArgs e)
@@ -332,20 +285,6 @@ namespace LUDOGAMM
 
         }
 
-        private void dataGridAdhesion_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-                dataGridAdhesion.EditMode = DataGridViewEditMode.EditOnEnter;
-                dataGridAdhesion.Name = "Adhesion";
-                dataGridAdhesion.Location = new Point(8, 8);
-                dataGridAdhesion.Size = new Size(500, 400);
-                dataGridAdhesion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-                dataGridAdhesion.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
-                dataGridAdhesion.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-                dataGridAdhesion.GridColor = SystemColors.ActiveBorder;
-                dataGridAdhesion.RowHeadersVisible = true;
-
-                dataGridAdhesion.Columns[0].Name = "Date début";
-        }
 
         private void Adherents_Load(object sender, EventArgs e)
         {
