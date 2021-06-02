@@ -8,17 +8,16 @@ using System.Windows.Forms;
 
 namespace LUDOGAMM
 {
-    public partial class Form1 : Form
+    public partial class ListeJeux : MenuView
     {
-        public Form1()
+        public ListeJeux()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ListeJeux_Load(object sender, EventArgs e)
         {
-            //if (!string.IsNullOrWhiteSpace(txtName.Text) && !lstNames.Items.Contains(txtName.Text))
-            //    lstNames.Items.Add(txtName.Text);
+
         }
     }
 }
